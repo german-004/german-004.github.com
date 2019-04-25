@@ -44,7 +44,7 @@ links.forEach(function(link) {
 
         // Aleta el mensaje
         setTimeout(function(){
-            location.href = "/";
+            location.href = "/boletines";
         }),1000;
 
         // setInterval(function(){
