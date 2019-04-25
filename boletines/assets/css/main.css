@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Dokdo', cursive;
+}
+
+a{
+    text-decoration: none;
+    color: #d500f9;
+}
+
+img{
+    max-width: 100%;
+}
+
+a:hover{
+    opacity: 0.8;
+}
+
+a:active{
+    background: red;
+}
+
+.title{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.container{
+    background: #B993D6;  /*Respaldo*/
+    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6); 
+    background: linear-gradient(to right, #8CA6DB, #B993D6); 
+    height: 100vh;/*Alto total de la pantalla*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    max-width: 960px;
+    max-height: 500px;
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    /* box-shadow: diferenciaHorizontal diferenciaVertical desenfoque amplitud color; los 2 primero y el ultimo valor son oblogatorios,
+    de igual manera se pueden poner mas de una sombra */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: relative;
+    overflow: scroll;
+}
+
+.content{
+    padding: 1em;
+}
+td{
+    display: block;
+    width: 100%;
+}
+td:nth-of-type(1){
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #642b73;
+}
+th{
+    display: none;
+}
+
+.action{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.close{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #642b73;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragraph{
+    line-height: 1.8em;
+    font-weight: 300;
+}
+
+.fa-star, .fa-star-o{
+    color: #ffc400;
+}
+
+.table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table td, .table th{
+    padding: 1em;
+    text-align: left;
+}
+
+.table tr:nth-child(even){
+    background-color: #f3e5f5;
+}
+
+.title-item{
+    /* 
+    border-bottom-style: solid;
+    border-width:  2px;
+    border-color: #c6426e;
+    */
+
+    /* shorthand properties - la localizacion del valor no altera el producto */
+    font-size: 2em;
+    border-bottom: solid 2px #c6426e;
+    padding-bottom: 1em;
+    /* Un valor equivale a todos los lados
+    padding-top: 2em;
+     */
+    /* comentario 
+    padding: arriba derecha abajo izquierda
+
+    --- Cunado nos dan 2 valores --
+    padding: arriba/abajo derecha/izquierda
+    */
+}
+
+.address{
+    font-weight: bold;
+    color: #642b73;
+    font-size: 1.2em;  
+    margin-top: 2em;
+    display: inline-block;  
+}
+
+.main-image{
+    float: left;
+    margin-right: 1em;
+    height: 250px;
+}
+
+.position{
+        background-color: #c6426e;
+        color: #fff;
+        padding: 0.5em;
+        border-radius: 4px;
+        margin-right: 0.5em;
+        /* 
+        border-top-left-radius: 2em;
+        border-top-right-radius: 2em;
+        border-bottom-left-radius: 2em;
+        border-bottom-right-radius: 2em;
+        */      
+}
+
+/* ESPECIFICIDAD
+--- IMPORTANCIA GERARQUICA ---
+
+1. Important
+2. Atributo Style
+
+selectore
+
+1. Selectores por ID
+2. Selectores por clase, atributo y pseudo clases
+3. Selectores de tipo y pseudo elemento
+*/
+
+/* position: static | relative | absolute | fixed | sticky; 
+
+Solo funciona si no es en position estatica, ya que en static no seta posicionada
+
+top | bottom | left | right
+div{
+    background: red;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    top: 1100px;
+    left: 200px;
+}
+*/
+
+
+/* MEDIA QUERIES */
+
+@media(min-width:900px){
+    th{
+        display: table-cell;
+    }
+
+    td{
+        width: auto;
+        display: table-cell;
+    }
+
+    td:nth-of-type(1){
+        font-size: 1em;
+    }
+
+    .content{
+        padding: 1.8em;
+    }
+}
+
+@media (min-height:550px){
+    .content{
+        height: 500px;
+    }
+}
