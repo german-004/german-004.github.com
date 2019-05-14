@@ -1,7 +1,10 @@
 * {
-	-webkit-box-sizing:border-box ;
-	-moz-box-sizing:border-box ;
-	box-sizing:border-box ;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
 }
 
 body {
@@ -179,17 +182,23 @@ header .contenedor-texto .texto .profesion {
 	font-size: 16px;
 	color: #000;
 }
+
 .lista{
 	text-align: center;
 }
+
 ul{
 	list-style: none;
 	font-size: 14px;
 	color: #636363;
+	text-align: center;
+	margin: 0px;
+	list-style-position: outside;
 }
 
 
-/* ----------- GALERIA ----------------- */
+
+/* -----------Titulo de la galeria ----------------- */
 
 .galeria{
     background: #fff;
@@ -200,109 +209,76 @@ h2{
 	font-size: 3em;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     color: #097486;
     /*-- Creamos una sombra --*/
     text-shadow: 0 1px 2px #000;
 }
 
-.contenedorGaleria{
-    width: 800px;
-    height: 400px;
-    overflow: hidden;
-    margin: 50px auto;
-    -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,0.35);
-	box-shadow: 0 0 10px 1px rgba(0,0,0,0.35);
-
+/* Linea de arriba color azul */
+.linea{
+    border-top: 5px solid #0077c0;
+    margin-bottom: 40px;
 }
 
-.contenedorGaleria ul{
-    width: 2000px;
+/* contenedor de las imagenes */
+.contenedor-imagenes{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
 }
 
-.contenedorGaleria li{
-    position: relative;
-    display: block;
-    width: 160px;
-    float: left;
-    -webkit-box-shadow: 0 0 25px 10px rgba(0,0,0,0.5);
-    box-shadow: 0 0 25px 10px rgba(0,0,0,0.5);
-
-   -webkit-transition: all 0.5s ease;
-   -o-transition: all 0.5s ease;
-   transition: all 0.5s ease;
+.contenedor-imagenes .imagen{
+    width: 32%;
+    /* Elemento padre */
+    position: relative; 
+    height: 250px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75)
 }
 
-/*-- La imagen sehace un poco mas obscura cunado este pequeña --*/
-.contenedorGaleria ul:hover li{
-    width: 40px;
-    filter: brightness(50%);
-}
-
-/*-- Regresa a su tamaño originañ --*/
-.contenedorGaleria ul li:hover{
-    width: 640px;
-    filter: brightness(100%);
-}
-
-.contenedorGaleria li img{
-    display: block;
-    width: 640px;
-    height: 100%;
-}
-
-.tituloImagen{
-    /*-- Position absolute para que se ponga encima de la imagen --*/
-    position: absolute;
-    top: 100%;
+/* La imagen ocupa un 100% de su contenedor */
+.imagen img{
     width: 100%;
-    display: block;
-    /*-- Se agrega la sombra para el titulo de la imagen --*/
-    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(255,255,255,0.8));
-    -webkit-backdrop-size: 400% 400%; 
-    background-size: 400% 400%;
-    animation: cambiarColor 10s linear infinite;
-
-    -webkit-transition: all 0.5s ease;
-   -o-transition: all 0.5s ease;
-   transition: all 0.5s ease;
+    height: 100%;
+    /* mejora las imagenes que no se vea estirado */
+    object-fit: cover;
 }
 
+/* Clase overlay en las imagenes */
+.overlay{
+    /* Elemento hijo */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(97, 172, 241, 0.5);
+    /* toma el 100% de su padre para acomodarse  */
+    width: 100%;
+    height: 0;
+    /* Esconde el texto hasta usar el efecto hover */
+    overflow: hidden;
+    transition: 1s ease;
+}
 
-.tituloImagen a{
-    display: block;
+/* Estilos al titulo h2 */
+.overlay h2{
     color: #fff;
-    text-decoration: none;
+    font-weight: 300;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     text-align: center;
-    padding: 20px;
-    font-size: 18px;
-    text-shadow: 0 1px 2px#000;
-
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    transform: translate(-50%, -50%);
 }
 
-/*-- Agregamos la sombra al titulo --*/
-.contenedorGaleria ul li:hover .tituloImagen{
-    top: 0%;
-    -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-}
-
-.tituloImagen:hover a {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.tituloImagen:active{
-    background: rgba(255, 255, 255, 0.8);
+/* Efecto hover en la imagen */
+.imagen:hover .overlay{
+    height: 100%;
+    cursor: pointer;
 }
 
 
@@ -434,6 +410,8 @@ footer .redes-sociales .instagram:hover {background: #ffdc80;}
 }
 
 
+
+
 @keyframes cambiaColor{
     0%{
         background-position: 0%, 50%;
@@ -443,5 +421,34 @@ footer .redes-sociales .instagram:hover {background: #ffdc80;}
     }
     100%{
         background-position: 0%, 100%;
+    }
+}
+
+
+/* Responsive web desing para la galeria */
+@media screen and (max-width:1000px){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px){
+    h1{
+        font-size: 22px;
+    }
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
     }
 }
