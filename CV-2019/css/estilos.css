@@ -385,16 +385,21 @@ footer .redes-sociales .instagram:hover {background: #ffdc80;}
 
 /* ----------MEDIA QUERIES-------*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 	header .menu {
 		text-align: center;
 	}
+
 	.main .trabajos .contenedor .trabajo {
 		width: 46%;
 	}
+
+	.contenedor-imagenes{
+        width: 95%;
+    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 	header .contenedor-texto .texto .nombre {
 		font-size: 35px;
 	}
@@ -403,42 +408,17 @@ footer .redes-sociales .instagram:hover {background: #ffdc80;}
 		font-size: 18px;
 	}
 
-	footer .redes-sociales .contenedor {
-		flex-wrap: wrap;
-		padding: 20px;
-	}	
-}
-
-
-
-
-@keyframes cambiaColor{
-    0%{
-        background-position: 0%, 50%;
-    }
-    50%{
-        background-position: 100%, 50%;
-    }
-    100%{
-        background-position: 0%, 100%;
-    }
-}
-
-
-/* Responsive web desing para la galeria */
-@media screen and (max-width:1000px){
-    .contenedor-imagenes{
-        width: 95%;
-    }
-}
-
-@media screen and (max-width:700px){
-    .contenedor-imagenes{
+	.contenedor-imagenes{
         width: 90%;
     }
     .contenedor-imagenes .imagen{
         width: 48%;
     }
+
+	footer .redes-sociales .contenedor {
+		flex-wrap: wrap;
+		padding: 20px;
+	}	
 }
 
 @media screen and (max-width:450px){
@@ -452,3 +432,32 @@ footer .redes-sociales .instagram:hover {background: #ffdc80;}
         width: 80%;
     }
 }
+
+
+/* Responsive web desing para la galeria */
+/* @media screen and (max-width:1000px){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+} */
+
+/* @media screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+} */
+
+/* @media screen and (max-width:450px){
+    h1{
+        font-size: 22px;
+    }
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+} */
