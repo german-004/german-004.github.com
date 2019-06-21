@@ -97,6 +97,11 @@ a {text-decoration: none !important;}
   padding-right: 20px;
 }
 
+.fa {
+  font-size: 32px;
+  padding-right: 20px;
+}
+
 #service, #about, #team,
 #portfolio, #blog, #faq, #testimonial, #contact {
    padding-top: 120px;

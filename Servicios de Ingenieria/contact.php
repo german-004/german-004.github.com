@@ -25,7 +25,7 @@ if( empty($errors) ) {
 	$email_body = "You have received a new massage. ".
 	" Here are the address:\n Name: $name \n Email: $email_address \n Phone: $phone \n Message: $message";
 
-	$headers = "From: $myemail\n";
+	$headers = "From: el_unico258@hotmail.com";
 	$headers .= "Reply-To: $email_address";
 
 	mail($to,$email_subject,$email_body,$headers);
