@@ -58,7 +58,7 @@ a {text-decoration: none !important;}
 .font-color-gray {color: #000 !important;}
 
 
-/* All Section styles
+/* Estilo de todas las secci0ones
 ------------------------------------- */
 .section-title {
   padding-bottom: 62px;
@@ -104,7 +104,7 @@ a {text-decoration: none !important;}
 
 #service, #about, #team,
 #portfolio, #blog, #faq, #testimonial, #contact {
-   padding-top: 120px;
+  padding-top: 120px;
   padding-bottom: 120px;
 }
 
@@ -121,6 +121,11 @@ a {text-decoration: none !important;}
   background-size: cover !important;
 }
 
+/* =========== Logo =========== */
+img.logo {
+    width: 60px;
+    height: 60px;
+}
 
 
 /* preloader styles
@@ -232,7 +237,7 @@ a {text-decoration: none !important;}
 
 
 
-/* home section styles
+/* Seccion home
 /* ========================================== */
 #home {
   background: url('../images/home-bg.jpg') 50% 0 repeat-y fixed;
